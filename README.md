@@ -1,0 +1,3 @@
+- Efetuar o download do projeto
+- Ao baixar e acessar o projeto - no cmd executar o comando dentro da pasta NPM INSTALL - Isso vai baixar todas as dependencias do projeto
+- EXECUTAR - nodemon server.js
