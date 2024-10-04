@@ -1,0 +1,30 @@
+<h1 style="text-align: center">Alunos</h1>
+<div style="margin-top: 2rem;"  class="container">
+    <div class="row">
+        <div class="col">
+            Nome
+        </div>
+        <div class="col">
+            Email
+        </div>
+        <div class="col">
+            Matrícula
+        </div>
+        <div class="col">
+            Ações
+        </div>
+    </div>
+    {{#each alunos}}
+    <div class="row">
+        <div class="col">{{this.nome}}</div>
+        <div class="col">{{this.email}}</div>
+        <div class="col">{{this.matricula}}</div>
+        <div class="col">
+            <a href="/home/editar/{{@index}}" class="btn btn-warning">✏️ Editar</a>
+            <form action="/home/excluir/{{@index}}" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-danger">Excluir</button>
+            </form>
+        </div>
+    </div>
+    {{/each}}
+</div>

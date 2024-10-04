@@ -1,0 +1,21 @@
+<div class="container d-flex justify-content-center align-items-center" style="height: 50vh;">
+    <form action="{{#if aluno}}/home/editar/{{aluno.id}}{{else}}/home/cadastrar{{/if}}" method="POST" class="col-md-4">
+        {{#if aluno}}
+            <input type="hidden" name="id" value="{{aluno.id}}">
+        {{/if}}
+        <h1 class="text-center mb-4">{{#if aluno}}Editar Aluno{{else}}Cadastrar Aluno{{/if}}</h1>
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" id="nome" name="nome" class="form-control" value="{{#if aluno}}{{aluno.nome}}{{else}}""{{/if}}" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" value="{{#if aluno}}{{aluno.email}}{{else}}""{{/if}}" required>
+        </div>
+        <div class="mb-3">
+            <label for="matricula" class="form-label">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" class="form-control" value="{{#if aluno}}{{aluno.matricula}}{{else}}""{{/if}}" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">{{#if aluno}}Salvar{{else}}Enviar{{/if}}</button>
+    </form>
+</div>
